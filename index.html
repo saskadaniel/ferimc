@@ -29,12 +29,19 @@
 </html>
 
 <script>
-  window.goatcounter = window.goatcounter || {};
-  window.goatcounter.path = function() {
-    return '/ferimc';
+  window.goatcounter = {
+    no_onload: true
   };
 </script>
 
-<script async data-goatcounter="https://saskadaniel.goatcounter.com/count"
+<script async
+        data-goatcounter="https://saskadaniel.goatcounter.com/count"
         src="//gc.zgo.at/count.js"></script>
 
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    window.goatcounter.count({
+      path: '/ferimc'
+    });
+  });
+</script>
